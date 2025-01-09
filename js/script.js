@@ -116,6 +116,6 @@ function convertUnits(){
 
 function getConversionCategory(){
     const path = window.location.pathname;
-    if (path.includes("length")) return "length";
+    if (path.includes("index")) return "length";
     if (path.includes("weight")) return "weight";
 }
