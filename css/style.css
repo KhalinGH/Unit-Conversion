@@ -1,0 +1,6 @@
+#swap-button {
+    border: none;
+}
+#swap-button:focus {
+    outline: none;
+}
