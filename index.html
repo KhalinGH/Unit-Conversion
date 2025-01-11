@@ -43,7 +43,6 @@
                         <div class="mb-3">
                             <label for="from-unit" class="form-label">Select Unit:</label>
                             <select id="from-unit" class="form-select">
-                                <option value="0">Select unit</option>
                                 <option value="millimeters">Millimeters (mm)</option>
                                 <option value="centimeters">Centimeters (cm)</option>
                                 <option value="meters">Meters (M)</option>
@@ -72,7 +71,6 @@
                         <div class="mb-3">
                             <label for="to-unit" class="form-label">Select Unit:</label>
                             <select id="to-unit" class="form-select">
-                                <option value="0">Select unit</option>
                                 <option value="millimeters">Millimeters (mm)</option>
                                 <option value="centimeters">Centimeters (cm)</option>
                                 <option value="meters">Meters (M)</option>
@@ -82,7 +80,12 @@
                                 <option value="feet">Feet</option>
                             </select>
                         </div>
-                        <input id="to-value" type="number" class="form-control" placeholder="Converted value" disabled>
+                        <div class="input-group">
+                            <input id="to-value" type="number" class="form-control" placeholder="Converted value" disabled>
+                            <button id="copy-button" class="btn btn-outline-secondary" type="button" title="Copy to Clipboard" onclick="copy()">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -119,3 +119,25 @@ function getConversionCategory(){
     if (path.includes("index")) return "length";
     if (path.includes("weight")) return "weight";
 }
+
+function copy(){
+    let copyText = document.getElementById("to-value").value;
+
+    if (copyText){
+        navigator.clipboard.writeText(copyText);
+        const copyButton = document.getElementById('copy-button');
+        copyButton.innerHTML = '<i class="bi bi-clipboard-check"></i>';
+        copyButton.title = "Copied!";
+
+        setTimeout(() =>{
+            copyButton.innerHTML = '<i class="bi bi-clipboard"></i>';
+            copyButton.title = "Copy to Clipboard";
+        }, 2000);
+    }
+    else{
+        alert("No value to copy.");
+    }
+
+    copyText.select();
+    copyText
+}

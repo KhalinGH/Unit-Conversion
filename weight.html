@@ -74,7 +74,12 @@
                                 <option value="ounces">Ounces (oz)</option>
                             </select>
                         </div>
-                        <input id="to-value" type="number" class="form-control" placeholder="Converted value" disabled>
+                        <div class="input-group">
+                            <input id="to-value" type="number" class="form-control" placeholder="Converted value" disabled>
+                            <button id="copy-button" class="btn btn-outline-secondary" type="button" title="Copy to Clipboard" onclick="copy()">
+                                <i class="bi bi-clipboard"></i>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
