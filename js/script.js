@@ -88,11 +88,11 @@ const conversionFactors = {
         milliseconds: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11},
         seconds: {milliseconds: 1000, seconds: 1, minutes: 0.0166667, hours: 0.000277778, days: 1.1574e-5, weeks: 1.6534e-6, month: 3.8052e-7, years: 3.171e-8},
         minutes: {milliseconds: 60000, seconds: 60, minutes: 1, hours: 0.0166667, days: 0.00069444583333, weeks: 9.9206e-5, month: 2.2831e-5, years: 1.9026e-6},
-        //not done
-        hours: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11},
-        days: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11},
-        weeks: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11},
-        years: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11}
+        hours: {milliseconds: 3600000, seconds: 3600, minutes: 60, hours: 1, days: 0.0416667, weeks: 0.00595238, month: 0.00136986, years: 0.000114155},
+        days: {milliseconds: 8.64e+7, seconds: 86400, minutes: 1440, hours: 24, days: 1, weeks: 0.142857, month: 0.0328767, years: 0.00273973},
+        weeks: {milliseconds: 6.048e+8, seconds:604800, minutes: 10080, hours: 168, days: 7, weeks: 1, month: 0.230137, years: 0.0191781},
+        month: {milliseconds: 2.629746e+9, seconds: 2.629746e+6, minutes: 43829.1, hours: 730.484, days: 30.4368, weeks: 4.34812, month: 1, years: 0.0833333},
+        years: {milliseconds: 3.1556926e+10, seconds: 3.1556926e+7, minutes: 525949.2, hours: 8765.82, days: 365.242, weeks: 52.1775, month: 12, years: 1}
     },
 
 };
@@ -118,7 +118,7 @@ function convertUnits(){
         return;
     }
 
-    const result = value * conversionFactors[category][unit1][unit2];
+    const result = (value * conversionFactors[category][unit1][unit2]).toFixed(2);
 
     document.getElementById("to-value").value = result;
 
