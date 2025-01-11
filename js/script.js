@@ -84,6 +84,16 @@ const conversionFactors = {
         ounces: { grams: 28.3495, kilograms: 0.0283495, pounds: 0.0625, ounces: 1 }
     },
 
+    time:{
+        milliseconds: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11},
+        seconds: {milliseconds: 1000, seconds: 1, minutes: 0.0166667, hours: 0.000277778, days: 1.1574e-5, weeks: 1.6534e-6, month: 3.8052e-7, years: 3.171e-8},
+        minutes: {milliseconds: 60000, seconds: 60, minutes: 1, hours: 0.0166667, days: 0.00069444583333, weeks: 9.9206e-5, month: 2.2831e-5, years: 1.9026e-6},
+        //not done
+        hours: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11},
+        days: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11},
+        weeks: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11},
+        years: {milliseconds: 1, seconds:0.001, minutes: 1.6667e-5, hours: 2.7778e-7, days: 1.157416667e-8, weeks: 1.653452381428571e-9, month: 3.805201310464316636e-10, years: 3.171004567123287176e-11}
+    },
 
 };
 
@@ -116,8 +126,13 @@ function convertUnits(){
 
 function getConversionCategory(){
     const path = window.location.pathname;
+    //need to change this cause path isn't viable
     if (path.includes("index")) return "length";
     if (path.includes("weight")) return "weight";
+    if (path.includes("time")) return "time";
+    if (path.includes("temperature")) return "temperature";
+
+
 }
 
 function copy(){
