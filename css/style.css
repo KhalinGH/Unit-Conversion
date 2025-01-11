@@ -4,6 +4,6 @@
 #swap-button:focus {
     outline: none;
 }
-#convert-button {
-    margin-bottom: 10px;
+.convert-button-container {
+    margin-bottom: 20px;
 }
