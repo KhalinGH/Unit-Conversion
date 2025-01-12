@@ -152,5 +152,5 @@ function copy(){
     else{
         alert("No value to copy.");
     }
-    document.body.click();
+    document.body.focus();
 }
