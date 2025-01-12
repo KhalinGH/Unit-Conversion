@@ -143,7 +143,10 @@ function copy(){
         const copyButton = document.getElementById('copy-button');
         copyButton.innerHTML = '<i class="bi bi-clipboard-check"></i>';
         copyButton.title = "Copied!";
-        copyButton.blur();
+
+        setTimeout(() => {
+            copyButton.blur();
+        }, 100);
         setTimeout(() =>{
             copyButton.innerHTML = '<i class="bi bi-clipboard"></i>';
             copyButton.title = "Copy to Clipboard";
