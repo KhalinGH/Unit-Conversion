@@ -8,10 +8,11 @@ document.getElementById('swap-button').addEventListener('click', () => {
 
 document.querySelectorAll('button').forEach(button => {
     button.addEventListener('click', (event) => {
-        event.target.blur(); // Remove focus after click
-        button.addEventListener('touchstart', (event) => {
-            event.target.blur(); // Remove focus after touch
-        });
+        event.target.blur(); // Remove focus after interaction
+    });
+
+    button.addEventListener('touchstart', (event) => {
+        event.target.blur(); // Remove focus for touch interactions
     });
 });
 
