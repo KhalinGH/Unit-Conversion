@@ -3,6 +3,12 @@
 }
 #swap-button:focus {
     outline: none;
+    background-color: transparent;
+    
+}
+#swap-button:active {
+    background-color: transparent;  
+    box-shadow: none;
 }
 .convert-button-container {
     margin-bottom: 20px;
