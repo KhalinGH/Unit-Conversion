@@ -6,6 +6,12 @@ document.getElementById('swap-button').addEventListener('click', () => {
     [fromUnit.value, toUnit.value] = [toUnit.value, fromUnit.value];
 });
 
+document.querySelectorAll('button').forEach(button => {
+    button.addEventListener('click', (event) => {
+        event.target.blur(); // Remove focus after click
+    });
+});
+
 const conversionFactors = {
     length: {
         millimeters: {
@@ -152,5 +158,4 @@ function copy(){
     else{
         alert("No value to copy.");
     }
-    document.body.focus();
 }
