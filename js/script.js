@@ -144,9 +144,6 @@ function copy(){
         copyButton.innerHTML = '<i class="bi bi-clipboard-check"></i>';
         copyButton.title = "Copied!";
 
-        setTimeout(() => {
-            copyButton.blur();
-        }, 100);
         setTimeout(() =>{
             copyButton.innerHTML = '<i class="bi bi-clipboard"></i>';
             copyButton.title = "Copy to Clipboard";
@@ -155,4 +152,5 @@ function copy(){
     else{
         alert("No value to copy.");
     }
+    document.body.click();
 }
