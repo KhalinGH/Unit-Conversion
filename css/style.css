@@ -1,14 +1,9 @@
 #swap-button {
     border: none;
 }
-#swap-button:focus {
-    outline: none;
-    background-color: transparent;
-    
-}
-#swap-button:active {
-    background-color: transparent;  
-    box-shadow: none;
+#swap-button:hover {
+    color: rgb(234, 228, 53);
+    background: none;
 }
 .convert-button-container {
     margin-bottom: 20px;

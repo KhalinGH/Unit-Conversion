@@ -118,7 +118,7 @@ function convertUnits(){
         return;
     }
 
-    const result = (value * conversionFactors[category][unit1][unit2]).toFixed(5);
+    const result = (value * conversionFactors[category][unit1][unit2]).toFixed(3);
 
     document.getElementById("to-value").value = result;
 
