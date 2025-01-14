@@ -18,7 +18,7 @@ button {
     touch-action: manipulation;
     outline: none;
     box-shadow: none;
-    background: transparent; /* Adjust as needed */
+    background: transparent;
 }
 
 button:focus {
