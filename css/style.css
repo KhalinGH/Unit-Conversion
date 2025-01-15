@@ -8,21 +8,34 @@
 .convert-button-container {
     margin-bottom: 20px;
 }
+#convert-button {
+    background-color: #FFD2CD;
+}
 #copy-button:focus {
     outline: none;
     box-shadow: none;
 }
-button {
+/* button {
     -webkit-tap-highlight-color: transparent;
     -webkit-focus-ring-color: transparent;
     touch-action: manipulation;
     outline: none;
     box-shadow: none;
     background: transparent;
-}
+} */
 
-button:focus {
+/* button:focus {
     outline: none !important;
     box-shadow: none !important;
     background: transparent !important;
+} */
+
+body {
+    background-color: #ffebcd;
+}
+.card-body {
+    background-color: #CDE1FF;
+}
+.navbar {
+    background-color: #CDE1FF !important;
 }
