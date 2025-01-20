@@ -9,7 +9,7 @@
     margin-bottom: 20px;
 }
 #convert-button {
-    background-color: #FFD2CD;
+    background-color: hsl(186, 84%, 70%);
 }
 #copy-button:focus {
     outline: none;

@@ -92,8 +92,8 @@ function convertUnits(){
             alert("Conversion not supported!");
             return;
         }
-        result = ((value * 1000000) * conversionFactors[category][fromUnit][toUnit]) / 1000000;
-        // result = value * conversionFactors[category][fromUnit][toUnit];
+        // result = ((value * 100) * conversionFactors[category][fromUnit][toUnit]) / 100;
+        result = value * conversionFactors[category][fromUnit][toUnit];
   
     }
    
