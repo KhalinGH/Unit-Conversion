@@ -30,9 +30,9 @@ const conversionFactors = {
     
 
     weight: {
-        microgram: { microgram: 1, milligram: 0.001, grams: 1e-3, kilograms: 1e-6, pounds: 2.20462e-6, ounces: 3.5274e-5, stone: 1.57473e-6, metricTon: 1e-9 },
+        microgram: { microgram: 1, milligram: 0.001, grams: 1e-6, kilograms: 1e-9, pounds: 2.20462e-9, ounces: 3.5274e-8, stone: 1.57473e-10, metricTon: 1e-12 },
         milligram: { microgram: 1000, milligram: 1, grams: 1e-3, kilograms: 1e-6, pounds: 2.20462e-6, ounces: 3.5274e-5, stone: 1.57473e-6, metricTon: 1e-9 },
-        grams: { microgram: 1e3, milligram: 1000, grams: 1, kilograms: 0.001, pounds: 0.00220462, ounces: 0.035274, stone: 1.57473e-5, metricTon: 1e-6 },
+        grams: { microgram: 1e6, milligram: 1000, grams: 1, kilograms: 0.001, pounds: 0.00220462, ounces: 0.035274, stone: 1.57473e-5, metricTon: 1e-6 },
         kilograms: { microgram: 1e6, milligram: 1e3, grams: 1000, kilograms: 1, pounds: 2.20462, ounces: 35.274, stone: 0.000157473, metricTon: 1e-3 },
         pounds: { microgram: 4.53592e5, milligram: 453592, grams: 453.592, kilograms: 0.453592, pounds: 1, ounces: 16, stone: 0.0714286, metricTon: 4.53592e-5 },
         ounces: { microgram: 2.83495e4, milligram: 28349.5, grams: 28.3495, kilograms: 0.0283495, pounds: 0.0625, ounces: 1, stone: 0.00446429, metricTon: 2.83495e-5 },
