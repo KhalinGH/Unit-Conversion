@@ -358,3 +358,66 @@ function copy() {
     alert("No value to copy.");
   }
 }
+
+// set cookie
+function setCookie(cname, cvalue, expiry) {
+  const d = new Date();
+  d.setTime(d.getTime() + expiry * 24 * 60 * 60 * 1000);
+  let expires = "expires=" + d.toUTCString();
+  document.cookie =
+    cname + "=" + cvalue + ";" + expires + ";path=/;SameSite=Lax;Secure";
+}
+
+// get cookie value by name
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+// Show or hide cookie banner depending on consent
+function checkCookieConsent() {
+  const consent = getCookie("cookie_consent");
+  if (consent === "accepted") {
+    loadGoogleScripts();
+    document.getElementById("cookie-banner").style.display = "none";
+  } else if (consent === "rejected") {
+    disableGoogleAnalytics();
+    document.getElementById("cookie-banner").style.display = "none";
+  } else {
+    // show banner
+    document.getElementById("cookie-banner").style.display = "flex";
+  }
+}
+
+// Disable Google Analytics by setting global disable variable
+function disableGoogleAnalytics() {
+  window["ga-disable-G-2GXW8DWDTD"] = true;
+}
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("accept-cookies").addEventListener("click", () => {
+    setCookie("cookie_consent", "accepted", 365);
+    console.log("Accept clicked");
+    console.log("cookie is: " + getCookie("cookie_consent"));
+
+    document.getElementById("cookie-banner").style.display = "none";
+  });
+
+  document.getElementById("reject-cookies").addEventListener("click", () => {
+    setCookie("cookie_consent", "rejected", 365);
+    disableGoogleAnalytics();
+    document.getElementById("cookie-banner").style.display = "none";
+  });
+
+  checkCookieConsent();
+});

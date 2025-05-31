@@ -277,10 +277,48 @@
     </div>
     <footer class="text-center mt-5">
       <p>
-        Try our other converters:
+        <strong>Try our other converters:</strong>
         <a href="weight.html">Weight</a> | <a href="time.html">Time</a> |
-        <a href="temperature.html">Temperature</a>
+        <a href="temperature.html">Temperature</a> |
+        <a href="privacypolicy.html"
+          ><strong>View our privacy policy</strong></a
+        >
       </p>
     </footer>
+
+    <div
+      id="cookie-banner"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #222;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9999;
+      ">
+      <div>
+        We use Google Analytics and AdSense which set cookies to improve your
+        experience.
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          style="color: #4ea1f3"
+          >Learn more</a
+        >.
+      </div>
+      <div>
+        <button
+          id="accept-cookies"
+          style="margin-right: 0.5rem; padding: 0.5rem 1rem">
+          Accept
+        </button>
+        <button id="reject-cookies" style="padding: 0.5rem 1rem">Reject</button>
+      </div>
+    </div>
   </body>
 </html>
