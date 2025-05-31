@@ -1,19 +1,19 @@
 #swap-button {
-    border: none;
+  border: none;
 }
 #swap-button:hover {
-    background: none;
+  background: none;
 }
 
 .convert-button-container {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 #convert-button {
-    background-color: hsl(186, 84%, 70%);
+  background-color: hsl(186, 84%, 70%);
 }
 #copy-button:focus {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
 /* button {
     -webkit-tap-highlight-color: transparent;
@@ -31,11 +31,15 @@
 } */
 
 body {
-    background-color: #ffebcd;
+  background-color: #ffebcd;
 }
 .card-body {
-    background-color: #CDE1FF;
+  background-color: #cde1ff;
 }
 .navbar {
-    background-color: #CDE1FF !important;
+  background-color: #cde1ff !important;
+}
+.nav-link.active {
+  font-weight: bold;
+  text-decoration: underline;
 }

@@ -31,7 +31,18 @@
       rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Free Online Unit Converter | Length, Weight, Time, and More</title>
+    <title>
+      Free Online Unit Converter | Length, Weight, Time, and Temperature
+    </title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Weight Converter",
+        "description": "Easily convert between grams, kilograms, ounces, pounds, and tons with our accurate and user-friendly online weight conversion calculator.",
+        "url": "https://unitconversion.info/weight.html"
+      }
+    </script>
   </head>
   <body>
     <!-- Navbar -->
@@ -64,10 +75,13 @@
         <div class="col-md-3">
           <div class="card shadow-sm">
             <div class="card-body">
-              <h5 class="card-title">From</h5>
+              <h5 class="card-title">Convert From</h5>
               <div class="mb-3">
                 <label for="from-unit" class="form-label">Select Unit:</label>
-                <select id="from-unit" class="form-select">
+                <select
+                  id="from-unit"
+                  class="form-select"
+                  onchange="convertUnits()">
                   <option value="microgram">Microgram (ug)</option>
                   <option value="milligram">Milligram (mg)</option>
                   <option value="grams">Grams (g)</option>
@@ -82,6 +96,7 @@
                 id="from-value"
                 type="number"
                 class="form-control"
+                oninput="convertUnits()"
                 placeholder="Enter value" />
             </div>
           </div>
@@ -104,7 +119,10 @@
               <h5 class="card-title">To</h5>
               <div class="mb-3">
                 <label for="to-unit" class="form-label">Select Unit:</label>
-                <select id="to-unit" class="form-select">
+                <select
+                  id="to-unit"
+                  class="form-select"
+                  onchange="convertUnits()">
                   <option value="microgram">Microgram (ug)</option>
                   <option value="milligram">Milligram (mg)</option>
                   <option value="grams">Grams (g)</option>
@@ -144,5 +162,12 @@
       </div>
     </div>
     <script src="./js/script.js"></script>
+    <footer class="text-center mt-5">
+      <p>
+        Try our other converters:
+        <a href="index.html">Length</a> | <a href="time.html">Time</a> |
+        <a href="temperature.html">Temperature</a>
+      </p>
+    </footer>
   </body>
 </html>

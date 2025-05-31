@@ -22,7 +22,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Convert units of length, weight, time, and temperature easily with our free online unit converter. Accurate and fast results." />
+      content="Free online time unit converter for milliseconds, seconds, minutes, hours, days, weeks, and years. Fast, accurate, and easy to use." />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet" />
@@ -31,7 +32,18 @@
       rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Free Online Unit Converter | Length, Weight, Time, and More</title>
+    <title>
+      Free Online Unit Converter | Length, Weight, Time, and Temperature
+    </title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Time Converter",
+        "description": "Convert milliseconds, seconds, minutes, hours, days, weeks, and years using our fast and accurate online time conversion calculator.",
+        "url": "https://unitconversion.info/time.html"
+      }
+    </script>
   </head>
   <body>
     <!-- Navbar -->
@@ -64,23 +76,27 @@
         <div class="col-md-3">
           <div class="card shadow-sm">
             <div class="card-body">
-              <h5 class="card-title">From</h5>
+              <h5 class="card-title">Convert From</h5>
               <div class="mb-3">
                 <label for="from-unit" class="form-label">Select Unit:</label>
-                <select id="from-unit" class="form-select">
-                  <option value="milliseconds">Milliseconds</option>
-                  <option value="seconds">Seconds</option>
-                  <option value="minutes">Minutes</option>
-                  <option value="hours">Hours</option>
-                  <option value="days">Days</option>
-                  <option value="weeks">Weeks</option>
-                  <option value="years">Years</option>
+                <select
+                  id="from-unit"
+                  class="form-select"
+                  onchange="convertUnits()">
+                  <option value="milliseconds">Milliseconds (ms)</option>
+                  <option value="seconds">Seconds (s)</option>
+                  <option value="minutes">Minutes (min)</option>
+                  <option value="hours">Hours (h)</option>
+                  <option value="days">Days (d)</option>
+                  <option value="weeks">Weeks (wk)</option>
+                  <option value="years">Years (yr)</option>
                 </select>
               </div>
               <input
                 id="from-value"
                 type="number"
                 class="form-control"
+                oninput="convertUnits()"
                 placeholder="Enter value" />
             </div>
           </div>
@@ -103,7 +119,10 @@
               <h5 class="card-title">To</h5>
               <div class="mb-3">
                 <label for="to-unit" class="form-label">Select Unit:</label>
-                <select id="to-unit" class="form-select">
+                <select
+                  id="to-unit"
+                  class="form-select"
+                  onchange="convertUnits()">
                   <option value="milliseconds">Milliseconds</option>
                   <option value="seconds">Seconds</option>
                   <option value="minutes">Minutes</option>
@@ -142,5 +161,12 @@
       </div>
     </div>
     <script src="./js/script.js"></script>
+    <footer class="text-center mt-5">
+      <p>
+        Try our other converters:
+        <a href="index.html">Length</a> | <a href="weight.html">Weight</a> |
+        <a href="temperature.html">Temperature</a>
+      </p>
+    </footer>
   </body>
 </html>
