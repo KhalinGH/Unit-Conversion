@@ -49,20 +49,34 @@
     <nav class="navbar navbar-expand-sm navbar-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">QuickConversions</a>
-        <ul class="navbar-nav me-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Length</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="weight.html">Weight</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="time.html">Time</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="temperature.html">Temperature</a>
-          </li>
-        </ul>
+        <!-- Hamburger button -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible menu -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Length</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="weight.html">Weight</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="time.html">Time</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="temperature.html">Temperature</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
@@ -268,5 +282,39 @@
         >
       </p>
     </footer>
+    <div
+      id="cookie-banner"
+      style="
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #222;
+        color: white;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 9999;
+      ">
+      <div>
+        We use Google Analytics and AdSense which set cookies to improve your
+        experience.
+        <a
+          href="https://policies.google.com/privacy"
+          target="_blank"
+          style="color: #4ea1f3"
+          >Learn more</a
+        >.
+      </div>
+      <div>
+        <button
+          id="accept-cookies"
+          style="margin-right: 0.5rem; padding: 0.5rem 1rem">
+          Accept
+        </button>
+        <button id="reject-cookies" style="padding: 0.5rem 1rem">Reject</button>
+      </div>
+    </div>
   </body>
 </html>
