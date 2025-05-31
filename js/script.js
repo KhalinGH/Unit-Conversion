@@ -4,6 +4,7 @@ document.getElementById("swap-button").addEventListener("click", () => {
 
   // Swap the selected units
   [fromUnit.value, toUnit.value] = [toUnit.value, fromUnit.value];
+  convertUnits();
 });
 
 document.querySelectorAll("button").forEach((button) => {
